@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav__bar"> <!--MENU DE NAVEGACION-->
+            <h1 class="nav__bar-tittle">DojoWeather</h1>
+            <ul>
+                <li onclick="alerta('Burbank')">
+                    <a href="#">Burbank</a>
+                </li>
+                <li onclick="alerta('Chicago')">
+                    <a href="#">Chicago</a>
+                </li>
+                <li onclick="alerta('Dallas')">
+                    <a href="#">Dallas</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sanjose">
+            <h2 class="sanjose__title">San Jose</h2>
+            <form class="sanjose__form">
+                <label class="sanjose__form-label">show temperature in</label>
+                <select class="sanjose__form-select" onchange="temperatureUnit(this)">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+            </form>
+        </div>
+        <div class="row">
+            <div class="dia">
+                <h2 class="dia__title">Today</h2>
+                <img src="images/some_rain.png" alt="rain clouds" class="dia__img" />
+                <p class="dia__description">some rain</p>
+                <div class="temperaturas">
+                    <span class="tempMax" id="temperature1">24°</span>
+                    <span class="tempMin" id="temperature2">18°</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h2 class="dia__title">Tomorrow</h2>
+                <img src="images/some_sun.png" alt="sunny day" class="dia__img" />
+                <p class="dia__description">some sun</p>
+                <div class="temperaturas">
+                    <span class="tempMax" id="temperature3">27°</span>
+                    <span class="tempMin" id="temperature4">19°</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h2 class="dia__title">Friday</h2>
+                <img src="images/some_clouds.png" alt="clouds" class="dia__img" />
+                <p class="dia__description">some clouds</p>
+                <div class="temperaturas">
+                    <span class="tempMax" id="temperature5">21°</span>
+                    <span class="tempMin" id="temperature6">16°</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h2 class="dia__title">Saturday</h2>
+                <img src="images/some_sun.png" alt="sunny day" class="dia__img" />
+                <p class="dia__description">some sun</p>
+                <div class="temperaturas">
+                    <span class="tempMax" id="temperature7">26°</span>
+                    <span class="tempMin" id="temperature8">21°</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="cookie">
+            <img class="cookie__image" src="images/cookie.png" alt="cookie" />
+            <div class="cookie__text">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not edible ones) to personalize <br>
+                content and ads, to provide social media features and to <br>
+                analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button class="cookie__button" onclick="aceptar()">I Accept</button>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
